@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!--Nasa API usage-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NASA</title>
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+</head>
+
+<body>
+    <div class="sky">
+  
+        <!-- We add each element for the stars -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+  
+  <section class="hero is-transparent is-small has-text-centered">
+    <div class="hero-body is-medium media">
+      <div class="media-left">
+        <figure class="image is-96x96">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+          <img src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" alt="NASA"/>
+          </a>
+        </figure>
+      </div>
+      <div class="media-content has-text-white pt-8">
+        <p class="title has-text-white	">NASA Image, Video, and Audio by Date</p>
+      </div>
+    </div>
+  </section>
+  
+<div class="block"></div>
+
+  <div class="dateInput">
+     <input id="date" name="calendar" value="2022-07-06" type="date" min="1000-01-01" max="2022-09-01" required/>
+    <span class="validity"></span>
+
+    <div class="block"></div>
+    
+    <!--Submit button-->
+    <input is-centered  class="button is-info" id="submit" type="submit" value="Submit">
+  </div>
+
+  <div class="block"></div>
+  <div class="block"></div>
+   <div class="columns is-centered">
+     
+   <!-- IMAGE CODE -->
+  <div class="column pl-6">
+    <div id= "nasaImage" class = "card is-hidden">
+    <div class = "card-image">
+     <figure id="imageHolder" class="is-4by3 has-text-centered">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div id="imageHolderDiv" class="content">
+    </div>
+    </div>
+    </div>
+  </div>
+  
+  <!--  VIDEO CODE -->
+  <div class="column">
+    <div id= "nasaVideo" class = "card is-hidden">
+    <div class = "card-image">
+     <figure id="videoHolder" class="is-4by3">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div id="videoHolderDiv">
+    </div>
+    </div>
+    </div>
+  </div>
+  
+  <!--  AUDIO CODE -->
+  <div class="column pr-6">
+    <div id= "nasaAudio"  class = "card pr-5 is-hidden">
+    <div class="card-content">
+      <div id="audioHolderDiv"></div>
+    </div>
+  </div>
+ </div>
+   </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
